@@ -23,3 +23,8 @@ target_link_libraries(tests
   nanovg
   ${OPENGL_LIBRARIES}
   )
+
+# Build aufgabe1
+add_executable(aufgabe1
+aufgabe1.cpp
+  )

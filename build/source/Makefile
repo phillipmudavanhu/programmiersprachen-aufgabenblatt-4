@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+source/CMakeFiles/aufgabe1.dir/rule:
+	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/aufgabe1.dir/rule
+.PHONY : source/CMakeFiles/aufgabe1.dir/rule
+
+# Convenience name for target.
+aufgabe1: source/CMakeFiles/aufgabe1.dir/rule
+
+.PHONY : aufgabe1
+
+# fast build rule for target.
+aufgabe1/fast:
+	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/aufgabe1.dir/build.make source/CMakeFiles/aufgabe1.dir/build
+.PHONY : aufgabe1/fast
+
+# Convenience name for target.
 source/CMakeFiles/example.dir/rule:
 	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/example.dir/rule
 .PHONY : source/CMakeFiles/example.dir/rule
@@ -139,6 +154,33 @@ tests: source/CMakeFiles/tests.dir/rule
 tests/fast:
 	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/build
 .PHONY : tests/fast
+
+aufgabe1.o: aufgabe1.cpp.o
+
+.PHONY : aufgabe1.o
+
+# target to build an object file
+aufgabe1.cpp.o:
+	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/aufgabe1.dir/build.make source/CMakeFiles/aufgabe1.dir/aufgabe1.cpp.o
+.PHONY : aufgabe1.cpp.o
+
+aufgabe1.i: aufgabe1.cpp.i
+
+.PHONY : aufgabe1.i
+
+# target to preprocess a source file
+aufgabe1.cpp.i:
+	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/aufgabe1.dir/build.make source/CMakeFiles/aufgabe1.dir/aufgabe1.cpp.i
+.PHONY : aufgabe1.cpp.i
+
+aufgabe1.s: aufgabe1.cpp.s
+
+.PHONY : aufgabe1.s
+
+# target to generate assembly for a file
+aufgabe1.cpp.s:
+	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/aufgabe1.dir/build.make source/CMakeFiles/aufgabe1.dir/aufgabe1.cpp.s
+.PHONY : aufgabe1.cpp.s
 
 example.o: example.cpp.o
 
@@ -259,8 +301,12 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... aufgabe1"
 	@echo "... example"
 	@echo "... tests"
+	@echo "... aufgabe1.o"
+	@echo "... aufgabe1.i"
+	@echo "... aufgabe1.s"
 	@echo "... example.o"
 	@echo "... example.i"
 	@echo "... example.s"

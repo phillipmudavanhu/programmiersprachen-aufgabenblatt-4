@@ -3,13 +3,13 @@
 
 # compile C with /usr/bin/cc
 # compile CXX with /usr/bin/c++
-C_FLAGS =  
+C_FLAGS = -g  
 
 C_DEFINES = -DGLEW_STATIC
 
 C_INCLUDES = -I/home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/external -I/home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/external/glfw-3.2.1/include -I/home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/external/nanovg/src -I/home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/external/catch-1.1 
 
-CXX_FLAGS = -std=c++14 -Wall  
+CXX_FLAGS = -std=c++14 -Wall -g  
 
 CXX_DEFINES = -DGLEW_STATIC
 
