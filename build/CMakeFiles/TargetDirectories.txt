@@ -6,8 +6,7 @@
 /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build/external/glfw-3.2.1/src/CMakeFiles/rebuild_cache.dir
 /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build/external/glfw-3.2.1/src/CMakeFiles/glfw.dir
 /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build/external/glfw-3.2.1/src/CMakeFiles/edit_cache.dir
-/home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build/source/CMakeFiles/rebuild_cache.dir
 /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build/source/CMakeFiles/edit_cache.dir
+/home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build/source/CMakeFiles/rebuild_cache.dir
+/home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build/source/CMakeFiles/TestList.dir
 /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build/source/CMakeFiles/aufgabe1.dir
-/home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build/source/CMakeFiles/example.dir
-/home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build/source/CMakeFiles/tests.dir
