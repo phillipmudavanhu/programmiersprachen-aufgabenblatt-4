@@ -1,6 +1,6 @@
 # Build tests
-add_executable(tests
-  tests.cpp
+add_executable(TestList
+  TestList.cpp
   )
 
 
