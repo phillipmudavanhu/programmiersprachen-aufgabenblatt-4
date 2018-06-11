@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = /home/phil/Git/Programmierung/programmiersprachen-aufgabenbla
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+source/CMakeFiles/TestList.dir/rule:
+	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/TestList.dir/rule
+.PHONY : source/CMakeFiles/TestList.dir/rule
+
+# Convenience name for target.
+TestList: source/CMakeFiles/TestList.dir/rule
+
+.PHONY : TestList
+
+# fast build rule for target.
+TestList/fast:
+	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/TestList.dir/build.make source/CMakeFiles/TestList.dir/build
+.PHONY : TestList/fast
+
+# Convenience name for target.
 source/CMakeFiles/aufgabe1.dir/rule:
 	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/aufgabe1.dir/rule
 .PHONY : source/CMakeFiles/aufgabe1.dir/rule
@@ -125,35 +140,32 @@ aufgabe1/fast:
 	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/aufgabe1.dir/build.make source/CMakeFiles/aufgabe1.dir/build
 .PHONY : aufgabe1/fast
 
-# Convenience name for target.
-source/CMakeFiles/example.dir/rule:
-	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/example.dir/rule
-.PHONY : source/CMakeFiles/example.dir/rule
+TestList.o: TestList.cpp.o
 
-# Convenience name for target.
-example: source/CMakeFiles/example.dir/rule
+.PHONY : TestList.o
 
-.PHONY : example
+# target to build an object file
+TestList.cpp.o:
+	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/TestList.dir/build.make source/CMakeFiles/TestList.dir/TestList.cpp.o
+.PHONY : TestList.cpp.o
 
-# fast build rule for target.
-example/fast:
-	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/build
-.PHONY : example/fast
+TestList.i: TestList.cpp.i
 
-# Convenience name for target.
-source/CMakeFiles/tests.dir/rule:
-	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f CMakeFiles/Makefile2 source/CMakeFiles/tests.dir/rule
-.PHONY : source/CMakeFiles/tests.dir/rule
+.PHONY : TestList.i
 
-# Convenience name for target.
-tests: source/CMakeFiles/tests.dir/rule
+# target to preprocess a source file
+TestList.cpp.i:
+	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/TestList.dir/build.make source/CMakeFiles/TestList.dir/TestList.cpp.i
+.PHONY : TestList.cpp.i
 
-.PHONY : tests
+TestList.s: TestList.cpp.s
 
-# fast build rule for target.
-tests/fast:
-	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/build
-.PHONY : tests/fast
+.PHONY : TestList.s
+
+# target to generate assembly for a file
+TestList.cpp.s:
+	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/TestList.dir/build.make source/CMakeFiles/TestList.dir/TestList.cpp.s
+.PHONY : TestList.cpp.s
 
 aufgabe1.o: aufgabe1.cpp.o
 
@@ -182,143 +194,22 @@ aufgabe1.cpp.s:
 	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/aufgabe1.dir/build.make source/CMakeFiles/aufgabe1.dir/aufgabe1.cpp.s
 .PHONY : aufgabe1.cpp.s
 
-example.o: example.cpp.o
-
-.PHONY : example.o
-
-# target to build an object file
-example.cpp.o:
-	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/example.cpp.o
-.PHONY : example.cpp.o
-
-example.i: example.cpp.i
-
-.PHONY : example.i
-
-# target to preprocess a source file
-example.cpp.i:
-	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/example.cpp.i
-.PHONY : example.cpp.i
-
-example.s: example.cpp.s
-
-.PHONY : example.s
-
-# target to generate assembly for a file
-example.cpp.s:
-	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/example.cpp.s
-.PHONY : example.cpp.s
-
-glew.o: glew.c.o
-
-.PHONY : glew.o
-
-# target to build an object file
-glew.c.o:
-	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/glew.c.o
-	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/glew.c.o
-.PHONY : glew.c.o
-
-glew.i: glew.c.i
-
-.PHONY : glew.i
-
-# target to preprocess a source file
-glew.c.i:
-	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/glew.c.i
-	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/glew.c.i
-.PHONY : glew.c.i
-
-glew.s: glew.c.s
-
-.PHONY : glew.s
-
-# target to generate assembly for a file
-glew.c.s:
-	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/glew.c.s
-	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/glew.c.s
-.PHONY : glew.c.s
-
-tests.o: tests.cpp.o
-
-.PHONY : tests.o
-
-# target to build an object file
-tests.cpp.o:
-	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/tests.cpp.o
-.PHONY : tests.cpp.o
-
-tests.i: tests.cpp.i
-
-.PHONY : tests.i
-
-# target to preprocess a source file
-tests.cpp.i:
-	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/tests.cpp.i
-.PHONY : tests.cpp.i
-
-tests.s: tests.cpp.s
-
-.PHONY : tests.s
-
-# target to generate assembly for a file
-tests.cpp.s:
-	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/tests.dir/build.make source/CMakeFiles/tests.dir/tests.cpp.s
-.PHONY : tests.cpp.s
-
-window.o: window.cpp.o
-
-.PHONY : window.o
-
-# target to build an object file
-window.cpp.o:
-	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/window.cpp.o
-.PHONY : window.cpp.o
-
-window.i: window.cpp.i
-
-.PHONY : window.i
-
-# target to preprocess a source file
-window.cpp.i:
-	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/window.cpp.i
-.PHONY : window.cpp.i
-
-window.s: window.cpp.s
-
-.PHONY : window.s
-
-# target to generate assembly for a file
-window.cpp.s:
-	cd /home/phil/Git/Programmierung/programmiersprachen-aufgabenblatt-4/build && $(MAKE) -f source/CMakeFiles/example.dir/build.make source/CMakeFiles/example.dir/window.cpp.s
-.PHONY : window.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... TestList"
 	@echo "... aufgabe1"
-	@echo "... example"
-	@echo "... tests"
+	@echo "... TestList.o"
+	@echo "... TestList.i"
+	@echo "... TestList.s"
 	@echo "... aufgabe1.o"
 	@echo "... aufgabe1.i"
 	@echo "... aufgabe1.s"
-	@echo "... example.o"
-	@echo "... example.i"
-	@echo "... example.s"
-	@echo "... glew.o"
-	@echo "... glew.i"
-	@echo "... glew.s"
-	@echo "... tests.o"
-	@echo "... tests.i"
-	@echo "... tests.s"
-	@echo "... window.o"
-	@echo "... window.i"
-	@echo "... window.s"
 .PHONY : help
 
 
